@@ -2,6 +2,7 @@
 <head>
     <script type="text/javascript">
     function stampa() {
+        let ris = ""
         let n1 = parseInt(document.getElementById("numero1").value);
         let n2 = parseInt(document.getElementById("numero2").value);
         for(i=0;i<document.getElementsByName("Operazione").length;i++) {
@@ -16,40 +17,40 @@
 	switch (operation) {
 		
 		case "+":
-			let ris = n1+n2;
+			ris = n1+n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "-":
-			let ris = n1-n2;
+			 ris = n1-n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "*":
-			let ris = n1*n2;
+		     ris = n1*n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		case "/":
-			let ris = n1/n2;
+			 ris = n1/n2;
 			document.getElementById("risp").innerHTML= ris;
 			break;
 		default: 
-			let ris = "Choose an operation type.";
+			 ris = "Choose an operation type.";
        			document.getElementById("risp").innerHTML= ris;
 	}
     }
     </script>
     <body>
-        <label for="number1">numero 1:</label><br>
-        <input type="text" id="number1" add="number1" value=""><br>
+        <label for="numero1">numero 1:</label><br>
+        <input type="text" id="numero1" add="numero1" value=""><br>
     
-        <label for="number2">numero 2:</label><br>
-        <input type="text" id="number2" add="number2" value=""><br>
+        <label for="numero2">numero 2:</label><br>
+        <input type="text" id="numero2" add="numero2" value=""><br>
 
         <label for="operation">Operazione scelta:</label><br>
             <div>
-                <input type="radio" name="Operation" value="+">Somma (+)<br>
-                <input type="radio" name="Operation" value="-">Sottrazione (-)<br>
-                <input type="radio" name="Operation" value="*">Moltiplicazione(*)<br>
-                <input type="radio" name="Operation" value="/">Divisione (/)<br>
+                <input type="radio" name="Operazione" value="+">Somma (+)<br>
+                <input type="radio" name="Operazione" value="-">Sottrazione (-)<br>
+                <input type="radio" name="Operazione" value="*">Moltiplicazione(*)<br>
+                <input type="radio" name="Operazione" value="/">Divisione (/)<br>
             </div>
         <input type="button" value="Submit" onclick="stampa()">
         <p id="risp"></p>
